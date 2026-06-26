@@ -1,0 +1,143 @@
+Table Crop_Recommendation_Soil_Weather {
+  label varchar
+  n float
+  p float
+  k float
+  ph float
+  soil_color varchar
+  Zinc float
+  Sulfur float
+  Humidity_Winter float
+  Humidity_Spring float
+  Humidity_Summer float
+  Humidity_Autumn float
+  Max_Temp_Winter float
+  Max_Temp_Spring float
+  Max_Temp_Summer float
+  Max_Temp_Autumn float
+  Min_Temp_Winter float
+  Min_Temp_Spring float
+  Min_Temp_Summer float
+  Min_Temp_Autumn float
+  Precipitation_Winter float
+  Precipitation_Spring float
+  Precipitation_Summer float
+  Precipitation_Autumn float
+  Wind_Direction float
+  soil_moisture float
+  Cloud_Amount float
+  Wind_Speed_Range float
+  Surface_Pressure float
+}
+
+Table Crop_and_fertilizer {
+  label varchar
+  n float
+  p float
+  k float
+  ph float
+  temperature float
+  rainfall float
+  district_name varchar
+  soil_color varchar
+  fertilizer varchar
+  link varchar
+}
+
+Table Crop_Recommendation {
+  label varchar
+  n float
+  p float
+  k float
+  ph float
+  temperature float
+  rainfall float
+  humidity float
+}
+
+Table Crop_recommendation_3 {
+  label varchar
+  n float
+  p float
+  k float
+  ph float
+  temperature float
+  rainfall float
+  humidity float
+}
+
+Table crop_yield_1 {
+  label varchar
+  n float
+  p float
+  k float
+  ph float
+  temperature float
+  rainfall float
+  humidity float
+  soil_moisture float
+  soil_type varchar
+  organic_carbon float
+  sunlight_hours float
+  wind_speed float
+  region varchar
+  altitude float
+  season varchar
+  irrigation_type varchar
+  fertilizer float
+  pesticide float
+  yield float
+}
+
+Table crop_data {
+  label varchar
+  n float
+  p float
+  k float
+  ph float
+  temperature float
+  rainfall float
+}
+
+Table crop_yield_2 {
+  label varchar
+  n float
+  p float
+  k float
+  ph float
+  temperature float
+  rainfall float
+  humidity float
+  state varchar
+  year int
+  season varchar
+  area float
+  production float
+  fertilizer float
+  pesticide float
+  yield float
+}
+
+Table data_core {
+  label varchar
+  n float
+  p float
+  k float
+  temperature float
+  humidity float
+  soil_moisture float
+  soil_type varchar
+  fertilizer varchar
+}
+
+Table original_dataset {
+  label varchar
+  n float
+  p float
+  k float
+  ph float
+  temperature float
+  rainfall float
+  humidity float
+  soil_type varchar
+}

@@ -39,10 +39,7 @@ env.bak/
 venv.bak/
 
 # Project specific
-data/raw/*
-!data/raw/.gitkeep
-data/processed/*
-!data/processed/.gitkeep
+
 models/*
 !models/.gitkeep
 
