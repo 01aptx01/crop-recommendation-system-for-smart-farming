@@ -1,0 +1,110 @@
+source_file,source_column,unit,mapped_to_central_column,note
+Crop Recommendation using Soil Properties and Weather Prediction.csv,label,not_specified,label,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,n,%,n,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,p,ppm,p,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,k,ppm,k,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,ph,pH,ph,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,soil_color,not_specified,soil_color,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Zinc,ppm,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Sulfur,ppm,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Humidity_Winter,%,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Humidity_Spring,%,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Humidity_Summer,%,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Humidity_Autumn,%,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Max_Temp_Winter,degC,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Max_Temp_Spring,degC,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Max_Temp_Summer,degC,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Max_Temp_Autumn,degC,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Min_Temp_Winter,degC,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Min_Temp_Spring,degC,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Min_Temp_Summer,degC,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Min_Temp_Autumn,degC,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Precipitation_Winter,unknown,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Precipitation_Spring,unknown,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Precipitation_Summer,unknown,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Precipitation_Autumn,unknown,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Wind_Direction,not_specified,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,soil_moisture,fraction_0_1,soil_moisture,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Cloud_Amount,not_specified,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Wind_Speed_Range,not_specified,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop Recommendation using Soil Properties and Weather Prediction.csv,Surface_Pressure,not_specified,,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved."
+Crop and fertilizer dataset.csv,label,not_specified,label,
+Crop and fertilizer dataset.csv,n,kg/ha,n,
+Crop and fertilizer dataset.csv,p,kg/ha,p,
+Crop and fertilizer dataset.csv,k,kg/ha,k,
+Crop and fertilizer dataset.csv,ph,pH,ph,
+Crop and fertilizer dataset.csv,temperature,degC,temperature,
+Crop and fertilizer dataset.csv,rainfall,mm/year,rainfall,
+Crop and fertilizer dataset.csv,district_name,not_specified,district_name,
+Crop and fertilizer dataset.csv,soil_color,not_specified,soil_color,
+Crop and fertilizer dataset.csv,fertilizer,categorical,fertilizer,
+Crop and fertilizer dataset.csv,link,not_specified,,
+Crop_Recommendation.csv,label,not_specified,label,Rainfall max is below 300 in this source; kept as raw low-scale rainfall and not converted to yearly millimeters.
+Crop_Recommendation.csv,n,kg/ha,n,Rainfall max is below 300 in this source; kept as raw low-scale rainfall and not converted to yearly millimeters.
+Crop_Recommendation.csv,p,kg/ha,p,Rainfall max is below 300 in this source; kept as raw low-scale rainfall and not converted to yearly millimeters.
+Crop_Recommendation.csv,k,kg/ha,k,Rainfall max is below 300 in this source; kept as raw low-scale rainfall and not converted to yearly millimeters.
+Crop_Recommendation.csv,ph,pH,ph,Rainfall max is below 300 in this source; kept as raw low-scale rainfall and not converted to yearly millimeters.
+Crop_Recommendation.csv,temperature,degC,temperature,Rainfall max is below 300 in this source; kept as raw low-scale rainfall and not converted to yearly millimeters.
+Crop_Recommendation.csv,rainfall,unknown_low_scale_not_converted,rainfall,Rainfall max is below 300 in this source; kept as raw low-scale rainfall and not converted to yearly millimeters.
+Crop_Recommendation.csv,humidity,%,humidity,Rainfall max is below 300 in this source; kept as raw low-scale rainfall and not converted to yearly millimeters.
+crop-yield.csv,label,not_specified,label,
+crop-yield.csv,n,kg/ha,n,
+crop-yield.csv,p,kg/ha,p,
+crop-yield.csv,k,kg/ha,k,
+crop-yield.csv,ph,pH,ph,
+crop-yield.csv,temperature,degC,temperature,
+crop-yield.csv,rainfall,mm/year,rainfall,
+crop-yield.csv,humidity,%,humidity,
+crop-yield.csv,soil_moisture,%,soil_moisture,
+crop-yield.csv,soil_type,not_specified,soil_type,
+crop-yield.csv,organic_carbon,not_specified,,
+crop-yield.csv,sunlight_hours,not_specified,,
+crop-yield.csv,wind_speed,not_specified,,
+crop-yield.csv,region,not_specified,region,
+crop-yield.csv,altitude,not_specified,,
+crop-yield.csv,season,not_specified,season,
+crop-yield.csv,irrigation_type,not_specified,,
+crop-yield.csv,fertilizer,unknown_numeric,fertilizer,
+crop-yield.csv,pesticide,unknown_numeric,pesticide,
+crop-yield.csv,yield,unknown,yield,
+crop_data.csv,label,not_specified,label,
+crop_data.csv,n,kg/ha,n,
+crop_data.csv,p,kg/ha,p,
+crop_data.csv,k,kg/ha,k,
+crop_data.csv,ph,pH,ph,
+crop_data.csv,temperature,degC,temperature,
+crop_data.csv,rainfall,mm/year,rainfall,
+crop_yield.csv,label,not_specified,label,
+crop_yield.csv,n,kg/ha,n,
+crop_yield.csv,p,kg/ha,p,
+crop_yield.csv,k,kg/ha,k,
+crop_yield.csv,ph,pH,ph,
+crop_yield.csv,temperature,degC,temperature,
+crop_yield.csv,rainfall,mm/year,rainfall,
+crop_yield.csv,humidity,%,humidity,
+crop_yield.csv,state,not_specified,state,
+crop_yield.csv,year,not_specified,year,
+crop_yield.csv,season,not_specified,season,
+crop_yield.csv,area,unknown,area,
+crop_yield.csv,production,unknown,production,
+crop_yield.csv,fertilizer,unknown_numeric,fertilizer,
+crop_yield.csv,pesticide,unknown_numeric,pesticide,
+crop_yield.csv,yield,unknown,yield,
+data_core.csv,label,not_specified,label,
+data_core.csv,n,kg/ha,n,
+data_core.csv,p,kg/ha,p,
+data_core.csv,k,kg/ha,k,
+data_core.csv,temperature,degC,temperature,
+data_core.csv,humidity,%,humidity,
+data_core.csv,soil_moisture,%,soil_moisture,
+data_core.csv,soil_type,not_specified,soil_type,
+data_core.csv,fertilizer,categorical,fertilizer,
+original_dataset.csv,label,not_specified,label,Rainfall max is below 300 and unit was not provided in the prompt; kept unconverted.
+original_dataset.csv,n,kg/ha_assumed_from_source_family,n,Rainfall max is below 300 and unit was not provided in the prompt; kept unconverted.
+original_dataset.csv,p,kg/ha_assumed_from_source_family,p,Rainfall max is below 300 and unit was not provided in the prompt; kept unconverted.
+original_dataset.csv,k,kg/ha_assumed_from_source_family,k,Rainfall max is below 300 and unit was not provided in the prompt; kept unconverted.
+original_dataset.csv,ph,pH,ph,Rainfall max is below 300 and unit was not provided in the prompt; kept unconverted.
+original_dataset.csv,temperature,degC,temperature,Rainfall max is below 300 and unit was not provided in the prompt; kept unconverted.
+original_dataset.csv,rainfall,unknown_low_scale_not_converted,rainfall,Rainfall max is below 300 and unit was not provided in the prompt; kept unconverted.
+original_dataset.csv,humidity,%,humidity,Rainfall max is below 300 and unit was not provided in the prompt; kept unconverted.
+original_dataset.csv,soil_type,not_specified,soil_type,Rainfall max is below 300 and unit was not provided in the prompt; kept unconverted.

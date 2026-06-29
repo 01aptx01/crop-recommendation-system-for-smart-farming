@@ -1,0 +1,9 @@
+source_file,rows,source_note,label_non_null,area_non_null,soil_type_non_null,soil_color_non_null,ph_non_null,n_non_null,p_non_null,k_non_null,humidity_non_null,soil_moisture_non_null,temperature_non_null,rainfall_non_null,state_non_null,year_non_null,season_non_null,district_name_non_null,region_non_null,production_non_null,yield_non_null,fertilizer_non_null,pesticide_non_null,n_unit,p_unit,k_unit,rainfall_unit
+Crop Recommendation using Soil Properties and Weather Prediction.csv,3867,"N is percent; P and K are ppm. Weather features are seasonal, so canonical temperature/rainfall are left blank and original columns are preserved.",3867,0,0,3867,3867,3867,3867,3867,0,3867,0,0,0,0,0,0,0,0,0,0,0,%,ppm,ppm,
+Crop and fertilizer dataset.csv,4513,,4513,0,0,4513,4513,4513,4513,4513,0,0,4513,4513,0,0,0,4513,0,0,0,4513,0,kg/ha,kg/ha,kg/ha,mm/year
+Crop_Recommendation.csv,2200,Rainfall max is below 300 in this source; kept as raw low-scale rainfall and not converted to yearly millimeters.,2200,0,0,0,2200,2200,2200,2200,2200,0,2200,2200,0,0,0,0,0,0,0,0,0,kg/ha,kg/ha,kg/ha,unknown_low_scale_not_converted
+crop-yield.csv,10000,,10000,0,10000,0,10000,10000,10000,10000,10000,10000,10000,10000,0,0,10000,0,10000,0,10000,10000,10000,kg/ha,kg/ha,kg/ha,mm/year
+crop_data.csv,694,,694,0,0,0,694,694,694,694,0,0,694,694,0,0,0,0,0,0,0,0,0,kg/ha,kg/ha,kg/ha,mm/year
+crop_yield.csv,19689,,19689,19689,0,0,19689,19689,19689,19689,19689,0,19689,19689,19689,19689,19689,0,0,19689,19689,19689,19689,kg/ha,kg/ha,kg/ha,mm/year
+data_core.csv,8000,,8000,0,8000,0,0,8000,8000,8000,8000,8000,8000,0,0,0,0,0,0,0,0,8000,0,kg/ha,kg/ha,kg/ha,
+original_dataset.csv,5000,Rainfall max is below 300 and unit was not provided in the prompt; kept unconverted.,5000,0,5000,0,5000,5000,5000,5000,5000,0,5000,5000,0,0,0,0,0,0,0,0,0,kg/ha_assumed_from_source_family,kg/ha_assumed_from_source_family,kg/ha_assumed_from_source_family,unknown_low_scale_not_converted
