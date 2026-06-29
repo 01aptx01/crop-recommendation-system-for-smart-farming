@@ -1,0 +1,9 @@
+source_file,rows,complete_required_rows,avg_required_feature_count,has_area_size_rows,has_soil_type_rows,has_ph_rows,has_npk_rows,has_soil_humidity_rows,has_temp_rows,has_rainfall_rows
+Crop Recommendation using Soil Properties and Weather Prediction.csv,3867,0,3.0,0,0,3867,3867,3867,0,0
+Crop and fertilizer dataset.csv,4513,0,4.0,0,0,4513,4513,0,4513,4513
+Crop_Recommendation.csv,2200,0,4.0,0,0,2200,2200,0,2200,2200
+crop-yield.csv,10000,0,6.0,0,10000,10000,10000,10000,10000,10000
+crop_data.csv,694,0,4.0,0,0,694,694,0,694,694
+crop_yield.csv,19689,0,5.0,19689,0,19689,19689,0,19689,19689
+data_core.csv,8000,0,4.0,0,8000,0,8000,8000,8000,0
+original_dataset.csv,5000,0,5.0,0,5000,5000,5000,0,5000,5000

@@ -15,6 +15,8 @@ OUTPUT_DIR = PROJECT_ROOT / "data" / "raw" / "central"
 OUTPUT_PATH = OUTPUT_DIR / "central_raw_dataset.csv"
 SUMMARY_PATH = OUTPUT_DIR / "central_raw_dataset_summary.csv"
 UNIT_DICTIONARY_PATH = OUTPUT_DIR / "central_unit_dictionary.csv"
+REQUIRED_FEATURES_PATH = OUTPUT_DIR / "central_required_features_raw.csv"
+REQUIRED_FEATURES_SUMMARY_PATH = OUTPUT_DIR / "central_required_features_summary.csv"
 
 
 # Keep units as metadata instead of converting values. This prevents rows from
@@ -309,6 +311,86 @@ def build_summary(central: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def build_required_features(central: pd.DataFrame) -> pd.DataFrame:
+    required = pd.DataFrame(
+        {
+            "central_feature_id": central["central_raw_id"].str.replace("CRAW", "CFEAT", regex=False),
+            "source_file": central["source_file"],
+            "source_path": central["source_path"],
+            "source_row_id": central["source_row_id"],
+            "source_record_hash": central["source_record_hash"],
+            "source_note": central["source_note"],
+            "label": central["label"],
+            "area_size": central["area"],
+            "area_size_unit": central["area_unit"],
+            "soil_type": central["soil_type"],
+            "ph": central["ph"],
+            "ph_unit": central["ph_unit"],
+            "n": central["n"],
+            "n_unit": central["n_unit"],
+            "p": central["p"],
+            "p_unit": central["p_unit"],
+            "k": central["k"],
+            "k_unit": central["k_unit"],
+            "soil_humidity": central["soil_moisture"],
+            "soil_humidity_unit": central["soil_moisture_unit"],
+            "temp": central["temperature"],
+            "temp_unit": central["temperature_unit"],
+            "rainfall": central["rainfall"],
+            "rainfall_unit": central["rainfall_unit"],
+        }
+    )
+
+    feature_groups = {
+        "area_size": ["area_size"],
+        "soil_type": ["soil_type"],
+        "ph": ["ph"],
+        "npk": ["n", "p", "k"],
+        "soil_humidity": ["soil_humidity"],
+        "temp": ["temp"],
+        "rainfall": ["rainfall"],
+    }
+
+    for feature_name, columns in feature_groups.items():
+        required[f"has_{feature_name}"] = required[columns].notna().all(axis=1)
+
+    feature_flags = [f"has_{name}" for name in feature_groups]
+    required["required_feature_count"] = required[feature_flags].sum(axis=1).astype(int)
+    required["is_required_feature_complete"] = required[feature_flags].all(axis=1)
+
+    missing_values = []
+    for _, row in required.iterrows():
+        missing = [name for name in feature_groups if not bool(row[f"has_{name}"])]
+        missing_values.append(";".join(missing))
+    required["missing_required_features"] = missing_values
+
+    return required
+
+
+def build_required_features_summary(required: pd.DataFrame) -> pd.DataFrame:
+    feature_flags = [
+        "has_area_size",
+        "has_soil_type",
+        "has_ph",
+        "has_npk",
+        "has_soil_humidity",
+        "has_temp",
+        "has_rainfall",
+    ]
+    rows = []
+    for source_file, group in required.groupby("source_file", sort=True):
+        row = {
+            "source_file": source_file,
+            "rows": len(group),
+            "complete_required_rows": int(group["is_required_feature_complete"].sum()),
+            "avg_required_feature_count": round(float(group["required_feature_count"].mean()), 4),
+        }
+        for flag in feature_flags:
+            row[f"{flag}_rows"] = int(group[flag].sum())
+        rows.append(row)
+    return pd.DataFrame(rows)
+
+
 def main() -> None:
     if not INPUT_DIR.exists():
         raise FileNotFoundError(f"Input directory not found: {INPUT_DIR}")
@@ -336,12 +418,17 @@ def main() -> None:
     central.to_csv(OUTPUT_PATH, index=False)
     build_summary(central).to_csv(SUMMARY_PATH, index=False)
     build_unit_dictionary(paths).to_csv(UNIT_DICTIONARY_PATH, index=False)
+    required = build_required_features(central)
+    required.to_csv(REQUIRED_FEATURES_PATH, index=False)
+    build_required_features_summary(required).to_csv(REQUIRED_FEATURES_SUMMARY_PATH, index=False)
 
     print(f"Wrote {OUTPUT_PATH.relative_to(PROJECT_ROOT)}")
     print(f"Rows: {len(central):,}")
     print(f"Columns: {len(central.columns):,}")
     print(f"Wrote {SUMMARY_PATH.relative_to(PROJECT_ROOT)}")
     print(f"Wrote {UNIT_DICTIONARY_PATH.relative_to(PROJECT_ROOT)}")
+    print(f"Wrote {REQUIRED_FEATURES_PATH.relative_to(PROJECT_ROOT)}")
+    print(f"Wrote {REQUIRED_FEATURES_SUMMARY_PATH.relative_to(PROJECT_ROOT)}")
 
 
 if __name__ == "__main__":
